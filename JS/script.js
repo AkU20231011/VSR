@@ -1,10 +1,10 @@
 jQuery(function($){
 $('.clients-slider').slick({
-slidesToShow: 2,
+slidesToShow: 4,
 slidesToScroll: 1,
 infinite:true,
-autoplay: false,
-autoplaySpeed: 700,
+autoplay:true,
+autoplaySpeed: 1000,
 arrows: false,
 dots: false,
 pauseOnHover: true,
@@ -15,14 +15,18 @@ responsive: [{
 breakpoint: 980,
 settings: {
 slidesToShow: 1,
-slidesToScroll: 1
+slidesToScroll: 1,
+autoplay:true,
+autoplaySpeed: 1000,
 }
 },
 {
 breakpoint: 480,
 settings: {
 slidesToShow: 1,
-slidesToScroll: 1
+slidesToScroll: 1,
+autoplay:true,
+autoplaySpeed: 1000,
 }
 }
 ]

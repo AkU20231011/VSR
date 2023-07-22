@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 .navbar .navbar-nav .nav-item a{
     padding: 20px;
     color: #303030!important;
@@ -22,7 +22,7 @@
     font-family: poppins;
     font-size: 15px;
     font-weight: 500;
-    border: 2px solid #ff0000;
+    border: 1px solid #ff0000;
 }
 .navbar-light .navbar-toggler {
     color: #ffffff;
@@ -30,7 +30,7 @@
 }
 .navbar .navbar-nav .nav-but .btn-outline-dark:hover {
     background: white;
-    border: 2px solid #ff0000;
+    border: 1px solid #ff0000;
     color: #ff0000;
     outline: none;
 }
@@ -106,6 +106,18 @@ p.num-text {
     font-family: Montserrat;
 }
 
+section.features-section:after {
+    content: '';
+    width: 700px;
+    position: absolute;
+    height: 700px;
+    background-color: #ff000017;
+    border-radius: 50%;
+    top: 647px;
+    left: -184px;
+    z-index: -10000;
+    overflow: hidden;
+}
 
 .fea-text span {
     font-family: poppins;
@@ -118,6 +130,9 @@ p.num-text {
     font-size: 16px;
     font-family: poppins;
     line-height: 1.6;
+}
+.btn-outline-dark:active:focus {
+    box-shadow:none;
 }
 
 .features-section .col-lg-2 {
@@ -172,6 +187,9 @@ section.feature-card {
 .benefits-sec {
     background-color: #000066;
     padding-bottom: 250px;
+}
+.customer-review {
+    margin-bottom: -20px;
 }
 
 .benefits-sec p{
@@ -252,10 +270,11 @@ span.card-heading {
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: 0.25rem;
-    max-width: 50%;
+    max-width: 35%;
     height: auto;
     border: none;
-    /* padding-top: 15px; */
+    padding-bottom: 15px;
+    margin-left: -10px!important; 
 }
 
 .testi-card h4 {
@@ -319,7 +338,7 @@ float: left;
     font-size: 20px;
     font-weight: 500;
     box-shadow: 5px 6px 20px 0px #ff00004f;
-    border: 2px solid #ff0000;
+    border: 1px solid #ff0000;
 }
 .btn:focus {
     outline: 0;
@@ -365,7 +384,7 @@ section.this_than_sec {
 .slider-btn:hover {
     color: #ff0000;
     background: transparent;
-    border: 2px solid #ff0000;
+    border: 1px solid #ff0000;
 }
 .space{
     margin:0px 5px;
@@ -453,11 +472,29 @@ section.this_than_sec {
 }
 
 /* Responsive Code */ 
-
+@media(min-width:981px){
+    .slider-review {
+        width: 150%!important;
+        margin-left: -25%;
+    }
+}
 @media (max-width: 480px) {
     .fea-card-m {
         display: flex;
         justify-content: center;
+    }
+
+    section.features-section:after {
+        content: '';
+        width: 400px;
+        position: absolute;
+        height: 400px;
+        background-color: #ff000017;
+        border-radius: 50%;
+        top: 616px;
+        left: -100px;
+        z-index: -10000;
+        overflow: hidden;
     }
 
     .Copyright-text {
@@ -617,31 +654,31 @@ section.this_than_sec {
         font-size: 16px;
         font-weight: 500;
         box-shadow: 5px 6px 20px 0px #ff00004f;
-        border: 2px solid #ff0000;
+        border: 1px solid #ff0000;
     }
-    .basic-addon3{
-        width: 100%;
-        border-radius: 5px!important;
-    }
-    .basic-url {
-        margin-top: 1px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-    .addon-wrapping{
-        margin-top: 1px;
-    }
-    
 
+    .custom-file-input::before {
+        margin-left: 25px;
+    }
 }
-
-
 
   @media (min-width: 480px) and (max-width: 980px) {
     .list-section .row.g-0 {
         padding-bottom: 20px;
     }
 
+    section.features-section:after {
+        content: '';
+        width: 700px;
+        position: absolute;
+        height: 700px;
+        background-color: #ff000017;
+        border-radius: 50%;
+        top: 560px;
+        left: -184px;
+        z-index: -10000;
+        overflow: hidden;
+    }
 
     .list-section .card-text:last-child {
         margin-bottom: 0;
@@ -661,7 +698,6 @@ section.this_than_sec {
         color: #000066;
         padding-top: 60px;
     }
-    
     
 
     
@@ -685,7 +721,6 @@ section.this_than_sec {
      height: auto;
      border: none;
 }
-
 #form {
     padding-top: 115px;
     padding-bottom: 25px;
@@ -760,18 +795,6 @@ section.this_than_sec {
         padding-bottom: 25px;
         padding-left: 20px;
         padding-right: 20px;
-    }
-    .basic-addon3{
-        width: 100%;
-        border-radius: 5px!important;
-    }
-    .basic-url {
-        margin-top: 1px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-    .addon-wrapping{
-        margin-top: 1px;
     }
 }
 /* login page */
@@ -879,6 +902,7 @@ body {
         max-width: 100%;
         padding-left: 10px !important;
         padding-right: 10px !important;
+        width: 100%;
     }
     .list-group-1{
         padding-left: 15px!important;
@@ -964,7 +988,7 @@ body {
 }
 /* brand logo  */
 #footer-logo {
-    width: 160px;
+    width: 130px;
 }
 /* footer nav links  */
 .custom-nav {
@@ -980,3 +1004,42 @@ p.fw-bolder.fs-2.mt-1.list-group-pera.mb-0.P-phone {
 }
 .form-control:focus {
    box-shadow: none;
+}
+
+
+/*post Review page */
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Choose Files';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 2px solid #999;
+    border-radius: 3px;
+    padding: 15px 25px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: poppins;
+    width: 240px;
+    height: 58px;
+    text-align: center;
+
+  }
+  .custom-file-input:hover::before {
+    border-color: #999;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+  #form {
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+
